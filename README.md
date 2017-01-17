@@ -11,7 +11,7 @@ The start.sh is a simple script for doing some customizations. I use it to start
 **contrib**
 I'll usually create a .dockerignore file that will ignore adding the contrib to the final docker container and put files that I would like to copy into the container in this folder. For example in my demo container I've put a custom splash screen for the default index.html for Apache2. This file gets copied to /var/www/html/index.html.
 
-![signalsciences_example_screenshot.png "SigSci Default HTML"] (contrib/signalsciences_example_screenshot.png)
+![signalsciences_example_screenshot.png "SigSci Default HTML"] (screenshots/signalsciences_example_screenshot.png)
 
 **sigsci-agent-docker.service**
 For people using systemctl, i.e. not Kubernetes, I've made an example service that you can add in. This service will ensure that the docker container automatically comes back up on restart.
@@ -21,6 +21,13 @@ The included dockerfile is my example for creating a container that has Apache2,
 
 **Makefile**
 I tend to prefer nice easy command for doing my tasks in building, deploying, and testing locally. The makefile simplifies this process but is not neccessary.
+
+**Kubernetes-yaml**
+Folder containing some exported examples of a Deployment, Service, and Pod.
+
+## Example Deployment creation
+
+![kube-create-deployment.png "Creating a Deployment"] (screenshots/kube-create-deployment.png)
 
 ## Running the container
 
